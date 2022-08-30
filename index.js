@@ -7,7 +7,7 @@ const user={}
 // app.use(cors())
 io.on('connection',Socket=>{
     Socket.on('new-user-joined',name=>{
-        console.log("name is :",name );
+        // console.log("name is :",name );
    user[Socket.id] =name ;
    Socket.broadcast.emit('user-joined',name);
     });
